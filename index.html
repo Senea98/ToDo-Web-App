@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="code.js"></script>
+    
+    <title>ToDo list</title>
+</head>
+<body onload="load()">
+    <div class="row">
+        <div class="col-6 text-center">
+            <h2>Income</h2>
+            <table id="income">
+                <tr>
+                    <td class="data">date</td>
+                    <td>Subject</td>
+                    <td>Sum</td>
+                    
+                </tr>
+            </table>
+        </div>
+        <div class="col-6 text-center">
+            <h2>Outgoings</h2>
+            <table id="outgoings">
+                <tr>
+                    <td>date</td>
+                    <td>Subiect</td>
+                    <td>Sum</td>
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="add">
+        <label for="date">Date: </label>
+        <input type="text" id="date">
+        <label for="subject">Subject: </label>
+        <input type="text" id="subject">
+        <label for="sum">Sum: </label>
+        <input type="text" id="sum">
+        <select name="in" id="in">
+            <option value="income">Income</option>
+            <option value="outgoings">Outgoings</option>
+        </select>
+        <button onclick="add_income()">Adauga</button>
+    </div>
+
+    <div class="sold">
+        <h4 id="sold">Soldul este 0</h4>
+    </div>
+</body>
+</html>
