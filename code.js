@@ -44,7 +44,7 @@ function load(){
     if(storage !== null){
         array = JSON.parse(storage);
         display('income', array);
-        for(obj of array)sold+=parseInt(obj.sum);
+        for(obj of array)sold+=parseFloat(obj.sum);
     }
 
     storage = localStorage.getItem('outgoings');
@@ -52,7 +52,8 @@ function load(){
     if(storage !== null){
         array = JSON.parse(storage);
         display('outgoings', array);
-        for(obj of array)sold+=parseInt(obj.sum);
+        for(obj of array)sold+=parseFloat(obj.sum);
+        
     }
     console.log("soldul este " + sold);
     document.getElementById('sold').innerHTML = "Soldul este "+sold;
